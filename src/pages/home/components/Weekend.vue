@@ -2,7 +2,7 @@
     <div>
         <div class="recommend-title">周末去哪</div>
          <ul>
-             <li class="item" v-for="(item,index) in recommendList" :key="index">
+             <li class="item" v-for="(item,index) in list" :key="index">
                 <div class="item-img-wrapper">
                    <img :src='item.imgUrl' alt="" class="item-img">
                 </div>
@@ -17,24 +17,12 @@
 <script>
 export default{
     name:"HomeWeekend",
+    props:{
+        list:Array
+    },
     data(){
         return{
-            recommendList:[{
-                id:"0001",
-                imgUrl:"http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
-                title:"深圳欢乐谷",
-                desc:"广东省深圳市南山区华侨城侨城街1号"
-            },{
-                id:"0002",
-                imgUrl:"http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
-                title:"深圳欢乐谷",
-                desc:"广东省深圳市南山区华侨城侨城街1号"
-            },{
-                id:"0003",
-                imgUrl:"http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
-                title:"深圳欢乐谷",
-                desc:"广东省深圳市南山区华侨城侨城街1号"
-            }]
+
         }
     }
 }
@@ -49,7 +37,7 @@ export default{
 .item-img-wrapper
   overflow hidden
   height:0
-  padding-bottom:33.9%
+  padding-bottom:37.09%
   .item-img
     width:100%
 .item-info
