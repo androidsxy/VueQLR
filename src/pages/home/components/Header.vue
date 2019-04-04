@@ -7,18 +7,17 @@
       <span class='iconfont'>&#xe632;</span>输入城市/景点/游玩主题</div>
     <!--router-link 路由跳转-->
     <router-link to="/city">
-    <div class="header-right">{{this.doubleCity}}<span class='iconfont back-icon-right'>&#xe64a;</span></div>
+    <div class="header-right">{{this.city}}<span class='iconfont back-icon-right'>&#xe64a;</span></div>
     </router-link>
   </div>
 </template>
 
 <script>
-import {mapState, mapGetters} from 'vuex'
+import {mapState} from 'vuex'
 export default {
   name: 'HomeHeader',
   computed:{
     ...mapState(['city']),
-    ...mapGetters(['doubleCity'])
   }
 }
 </script>
