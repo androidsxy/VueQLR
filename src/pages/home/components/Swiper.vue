@@ -19,6 +19,7 @@ export default{
             swiperOption:{
                 pagination:".swiper-pagination",
                 loop:true
+
             }
         }
     },
