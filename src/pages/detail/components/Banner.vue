@@ -1,9 +1,9 @@
 <template>
 <div>
   <div class="banner" @click="handbannerClick">
-    <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg" alt="" srcset="">
+    <img class="banner-img" :src="bannerlist.bannerImg" alt="" srcset="">
     <div class="banner-info">
-      <div class='banner-tittle'>故宫(AAAAA景区)</div>
+      <div class='banner-tittle'>{{bannerlist.sightName}}</div>
       <div class="banner-number">
         <span class='iconfont banner-icon'>&#xe60f;&nbsp;&nbsp;</span>8</div>
     </div>
@@ -15,10 +15,13 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
   mame:'DetailBanner',
+  props:{
+    bannerlist:Object,
+    imgs:Array
+  },
   data(){
     return {
       showGallary:false,
-      imgs:['//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg','//img1.qunarzz.com/sight/p0/1507/c1/f623e9c1a6c1c2534e783e5268ddcf5d.water.jpg_r_800x800_24a9e7f5.jpg']
     }
   },
   methods:{
