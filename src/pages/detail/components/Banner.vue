@@ -8,11 +8,18 @@
         <span class='iconfont banner-icon'>&#xe60f;&nbsp;&nbsp;</span>8</div>
     </div>
   </div>
-  <common-gallary @cloae="handCloaeClick" :imgs="imgs" v-show ="showGallary"></common-gallary>
+  <fade-animation>
+    <common-gallary
+      @cloae="handCloaeClick"
+     :imgs="imgs"
+     v-show ="showGallary">
+    </common-gallary>
+  </fade-animation>
 </div>
 </template>
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   mame:'DetailBanner',
   props:{
@@ -33,7 +40,8 @@ handCloaeClick(){
 }
   },
   components:{
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   }
 }
 </script>
