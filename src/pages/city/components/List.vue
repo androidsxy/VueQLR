@@ -62,7 +62,7 @@ export default{
         ...mapMutations(['changeCity'])
     },
     mounted(){
-        this.scroll = new Bscroll(this.$refs.wrapper);
+        this.scroll = new Bscroll(this.$refs.wrapper, { mouseWheel: true, click: true, tap: true });
     },
     //vue自带监听 当letter改变时
     watch:{
